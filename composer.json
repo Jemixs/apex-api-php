@@ -1,0 +1,22 @@
+{
+  "name": "jemixs/apex-api-php",
+  "description": "Apex legends api. PHP wrapper for apex.tracker.gg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Evgeny Orlov",
+      "email": "damags11@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jemixs\\APEXAPI\\" : "src/"
+    }
+  }
+}
