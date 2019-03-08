@@ -3,6 +3,10 @@
 namespace Jemixs\APEXAPI;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\ClientException;
+
 
 /**
  * Class apexApi
@@ -41,7 +45,11 @@ class apexApi
      */
     public function getPlayer($nickName)
     {
-        $getPlayer = $this->client->request('GET','profile/'.$this->platform.'/'.$nickName);
-        return json_decode($getPlayer->getBody(),true);
+        try {
+            $getPlayer = $this->client->request('GET','profile/'.$this->platform.'/'.$nickName);
+            return json_decode($getPlayer->getBody(),true);
+        }catch (ClientException $e) {
+           return '{"error":"'.$e->getCode().'"}';
+        }
     }
 }
