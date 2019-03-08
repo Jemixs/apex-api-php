@@ -13,7 +13,7 @@ Basic usage
 ============
 
 ```
-use Jemixs\APEXAPI;
+use Jemixs\APEXAPI\apexApi;
 
 const API_TOKEN = 'YOUR_API_TOKEN';
 

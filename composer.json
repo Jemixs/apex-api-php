@@ -1,7 +1,6 @@
 {
   "name": "jemixs/apex-api-php",
   "description": "Apex legends api. PHP wrapper for apex.tracker.gg",
-  "version": "1.0.0",
   "license": "MIT",
   "type": "library",
   "authors": [
